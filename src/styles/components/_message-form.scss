@@ -12,16 +12,18 @@
 
 .message-form {
     overflow: hidden;
-    border-radius: 6px;
-    border: 1px solid #3b2a50;
+    border-radius: 5px;
     background-color: white;
+    background: linear-gradient(145deg, #d7d7d7, #ffffff);
+    box-shadow:  15px 15px 40px rgba(0,0,0,.25),
+                -15px -15px 40px rgba(255,255,255,.25);
 }
 
 .message-input {
-    height: 40px;
-    width: calc(100% - 132px);
-    background-color: white;
-    border: 1px solid white;
+    height: 48px;
+    width: calc(100% - 75px);
+    background: transparent;
+    border: none;
     padding: 0px 18px;
     outline: none;
     font-size: 15px;
@@ -34,21 +36,16 @@
 }
 
 .send-button {
-    height: 42px;
-    background-color: white;
-    border: 1px solid white;
-    padding: 0px 18px;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
 }
 
 .send-icon {
-    top: 1px;
-    position: relative;
-    transform: rotate(-90deg);
+    font-size: 1.6em;
 }
 
 .picture-icon {
-    top: 1px;
     position: relative;
-    font-size: 14px;
+    font-size: 1.4em;
 }

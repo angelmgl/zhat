@@ -28,18 +28,21 @@ const MessageForm = (props) => {
 
     return(
         <form className="message-form" onSubmit={handleSubmit}>
-            <input 
+            
+            <label htmlFor="upload-button">
+                <span className="image-button" >
+                    <PictureOutlined className="picture-icon" />
+                </span>
+            </label>
+
+            <input
                 className="message-input"
                 placeholder="Escribe un mensaje..."
                 value={value}
                 onChange={handleChange}
                 onSubmit={handleSubmit}
             />
-            <label htmlFor="upload-button">
-                <span className="image-button" >
-                    <PictureOutlined className="picture-icon" />
-                </span>
-            </label>
+
             <input 
                 type="file"
                 multiple={false}
@@ -47,6 +50,7 @@ const MessageForm = (props) => {
                 style={{ display: 'none' }}
                 onChange={handleUpload}
             />
+
             <button type="submit" className="send-button">
                 <SendOutlined className="send-icon" />
             </button>

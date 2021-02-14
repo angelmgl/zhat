@@ -1,4 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62, 5%;
+    font-family: "Noto Sans JP", sans-serif;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
 @import './components/feed',
         './components/base',
         './components/messages',
-        './components/message-form';
+        './components/message-form',
+        './components/login';

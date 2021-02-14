@@ -2,26 +2,26 @@
     height: 100%;
     width: 100%;
     overflow: scroll;
-    background-color: #ddd;
+    background-color: #dfdfdf;
 }
 
 .chat-title-container {
     width: 100%;
-    padding: 18px;
+    padding: 10px 0;
     text-align: center;
-    background-color: rgba(0, 212, 255, 0.3);
+    background-color: #dfdfdf;
     position: sticky;
     top: 0px;
 }
 
 .chat-title {
-    color: #7554a0;
+    color: #000;
     font-weight: 800;
     font-size: 24px;
 }
 
 .chat-subtitle {
-    color: #7554a0;
+    color: #444;
     font-weight: 600;
     font-size: 12px;
     padding-top: 4px;

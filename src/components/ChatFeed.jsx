@@ -18,6 +18,11 @@ const ChatFeed = (props) => {
         ))
     }
 
+    const scrollDown = () => {
+        var feed = document.getElementById('chat-feed');
+        feed.scrollTop = feed.scrollHeight;
+    }
+
     const renderMessages = () => {
         const keys = Object.keys(messages);
 
@@ -39,6 +44,7 @@ const ChatFeed = (props) => {
                             marginLeft: isMyMessage ? '0px' : '18px' }} >
                                 {renderReadReceipts(message, isMyMessage)}
                         </div>
+                        {scrollDown()}
                     </div>
                 </div>
             )
@@ -48,7 +54,7 @@ const ChatFeed = (props) => {
     if(!chat) return 'Loading...';
 
     return(
-        <div className="chat-feed">
+        <div className="chat-feed" id="chat-feed">
             <div className="chat-title-container"> 
                 {console.log(chat)}
                 <div className="chat-title">{ chat?.title }</div>

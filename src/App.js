@@ -1,6 +1,7 @@
 import { ChatEngine } from 'react-chat-engine';
 
 import ChatFeed from './components/ChatFeed';
+import ChatList from './components/ChatList';
 import LoginForm from './components/LoginForm';
 
 import './styles/styles.css';

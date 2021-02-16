@@ -1,5 +1,5 @@
 .chat-feed {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     overflow: scroll;
     background-color: #dfdfdf;
@@ -12,6 +12,7 @@
     background-color: #dfdfdf;
     position: sticky;
     top: 0px;
+    z-index: 9999;
 }
 
 .chat-title {

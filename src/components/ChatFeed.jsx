@@ -1,6 +1,7 @@
 import MessageForm from './MessageForm';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
+import Loader from './Loader';
 
 const ChatFeed = (props) => {
     const { chats, activeChat, userName, messages } = props;
@@ -51,7 +52,7 @@ const ChatFeed = (props) => {
         });
     }
 
-    if(!chat) return 'Loading...';
+    if(!chat) return <Loader />;
 
     return(
         <div className="chat-feed" id="chat-feed">

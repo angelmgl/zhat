@@ -1,38 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+
+
 .wrapper {
     height: 100vh;
     width: 100%;
     background: rgb(117, 84, 160);
-    background: linear-gradient(
-        90deg,
-        rgba(117, 84, 160, 1) 7%,
-        rgba(117, 84, 160, 1) 17%,
-        rgba(106, 95, 168, 1) 29%,
-        rgba(99, 103, 174, 1) 44%,
-        rgba(87, 116, 184, 1) 66%,
-        rgba(70, 135, 198, 1) 83%,
-        rgba(44, 163, 219, 1) 96%,
-        rgba(22, 188, 237, 1) 100%,
-        rgba(0, 212, 255, 1) 100%
-    );
+    background: #38393A;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.icon {
+    color: #efefef;
+    font-size: 4em;
+    text-align: center;
+    width: 100%;
+}
+
 .input {
-    color: #333;
+    color: #efefef;
     font-size: 1.2rem;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
-    border-radius: 0.2rem;
-    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: inset 2px 2px 6px rgba(0,0,0,.5),
+                inset -2px -2px 6px rgba(255,255,255,.25);
     border: none;
     width: 90%;
     display: block;
-    border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
     outline: none;
     margin-bottom: 25px;
+
+    &:focus {
+        color: #303030;
+        background-color: #efefef;
+        box-shadow: inset 2px 2px 6px rgba(0,0,0,.5);
+    }
 }
 
 .form {
@@ -45,47 +51,58 @@
     margin-bottom: 30px;
     width: 100%;
     font-size: 2.3em;
+    font-family: 'Lexend Exa', sans-serif;
 }
 
-.button {
-    border-radius: 4px;
+form .button {
+    border-radius: 5px;
+    width: 90%;
     border: none;
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: #efefef;
     text-align: center;
     text-transform: uppercase;
     font-size: 22px;
-    padding: 20px;
-    width: 200px;
-    transition: all 0.4s;
+    padding: 10px 15px;
     cursor: pointer;
     margin: 5px;
-    width: 90%;
-}
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.4s;
-}
-.button span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-.button:hover span {
-    padding-right: 25px;
-}
-.button:hover span:after {
-    opacity: 1;
-    right: 0;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.5),
+                -5px -5px 15px rgba(255,255,255,.25);
+    transition: all 0.4s ease-in-out;
+    outline: none;
+
+    &:hover {
+        box-shadow: inset 5px 5px 15px rgba(0,0,0,.5),
+                    inset -5px -5px 15px rgba(255,255,255,.25);
+        color: #54a0ff;
+    }
+
+    &:active {
+        background-color: #fff;
+    }
 }
 
 .error {
-    color: white;
-    text-align: center;
-    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 0.7em;
+    color: #ff5400;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+    a {
+        text-decoration: none;
+        color: #efefef;
+        transition: all 0.4s;
+    }
+
+    a:hover {
+        color: #54a0ff;
+    }
 }

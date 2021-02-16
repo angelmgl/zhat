@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { FaGithub, FaComment } from 'react-icons/fa';
 
 const LoginForm = () => {
     const [ username, setUsername ] = useState('');
@@ -23,13 +24,14 @@ const LoginForm = () => {
 
             window.location.reload();
         } catch (error) {
-            setError('Pone bien tus datos ctm')
+            setError('Datos incorrectos, por favor, intente de nuevo.')
         }
     }
 
     return(
         <div className="wrapper">
             <div className="form">
+                <FaComment className="icon" />
                 <h1 className="title">ZHAT</h1>
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}
@@ -38,12 +40,19 @@ const LoginForm = () => {
                     className="input" placeholder="Contraseña" required />
                     <div align="center">
                         <button type="submit" className="button">
-                            <span>Entrar al Zhat</span>
+                            Entrar
                         </button>
-                        <h2 className="error">{error}</h2>
+                            <p className="error">{error}</p>
                     </div>
                 </form>
             </div>
+            <footer className="footer">
+                <address>
+                    <a href="https://github.com/angelmgl/" target="_blank">
+                        <FaGithub /> Angel Mgl 2021&copy;
+                    </a>
+                </address>
+            </footer>
         </div>
     )
 }

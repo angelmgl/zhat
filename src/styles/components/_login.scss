@@ -21,7 +21,7 @@
 .input {
     color: #efefef;
     font-size: 1.2rem;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     padding: 10px 20px;
     border-radius: 5px;
     background-color: transparent;
@@ -32,7 +32,6 @@
     display: block;
     transition: all 0.3s;
     outline: none;
-    margin-bottom: 25px;
 
     &:focus {
         color: #303030;
@@ -54,7 +53,7 @@
     font-family: 'Lexend Exa', sans-serif;
 }
 
-form .button {
+.submit-btn {
     border-radius: 5px;
     width: 90%;
     border: none;
@@ -74,11 +73,16 @@ form .button {
     &:hover {
         box-shadow: inset 5px 5px 15px rgba(0,0,0,.5),
                     inset -5px -5px 15px rgba(255,255,255,.25);
-        color: #54a0ff;
+        color: #3f3f3f;
     }
 
     &:active {
         background-color: #fff;
+    }
+
+    &:disabled {
+        background-color: #777;
+        color: #aaa;
     }
 }
 

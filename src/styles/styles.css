@@ -352,7 +352,7 @@
 .input {
   color: #efefef;
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: 0 auto 25px;
   padding: 10px 20px;
   border-radius: 5px;
   background-color: transparent;
@@ -364,7 +364,6 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   outline: none;
-  margin-bottom: 25px;
 }
 
 .input:focus {
@@ -387,7 +386,7 @@
   font-family: 'Lexend Exa', sans-serif;
 }
 
-form .button {
+.submit-btn {
   border-radius: 5px;
   width: 90%;
   border: none;
@@ -406,14 +405,19 @@ form .button {
   outline: none;
 }
 
-form .button:hover {
+.submit-btn:hover {
   -webkit-box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.25);
           box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.25);
-  color: #54a0ff;
+  color: #3f3f3f;
 }
 
-form .button:active {
+.submit-btn:active {
   background-color: #fff;
+}
+
+.submit-btn:disabled {
+  background-color: #777;
+  color: #aaa;
 }
 
 .error {
@@ -444,5 +448,99 @@ form .button:active {
 
 .footer a:hover {
   color: #54a0ff;
+}
+
+.sign-btn {
+  border: none;
+  margin-left: 5%;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #efefef;
+  outline: none;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(255, 255, 255, 0.25);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.sign-btn:hover {
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5), inset -1px -1px 5px rgba(255, 255, 255, 0.25);
+          box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.5), inset -1px -1px 5px rgba(255, 255, 255, 0.25);
+}
+
+.sign-modal {
+  max-width: 480px;
+  width: 90%;
+  height: 540px;
+  padding: 20px;
+  background-color: #54a0ff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  margin: auto;
+  top: -200%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+
+.register {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repeat-password-container {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.repeat-password-container #repeat-password {
+  margin-bottom: 0;
+}
+
+.repeat-password-container #pw-error {
+  margin-left: 5%;
+  color: #a00;
+  display: none;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  color: #efefef;
+  outline: none;
+  background-color: transparent;
+}
+
+.toggle-btn .toggle-icon {
+  font-size: 2.5em;
+}
+
+.toggle-btn:hover {
+  color: #b00;
 }
 /*# sourceMappingURL=styles.css.map */

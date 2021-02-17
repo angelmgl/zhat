@@ -1,3 +1,6 @@
+
+/*            renderChatList={(chatAppProps) => <ChatList {...chatAppProps} />} */
+
 const ChatList = (props) => {
     console.log(props);
 

@@ -1,3 +1,4 @@
+import SigninForm from './SigninForm';
 import { useState } from 'react';
 import axios from 'axios';
 import { FaGithub, FaComment } from 'react-icons/fa';
@@ -34,17 +35,20 @@ const LoginForm = () => {
                 <FaComment className="icon" />
                 <h1 className="title">ZHAT</h1>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}
+                    <input type="text" value={username} 
+                    onChange={(e) => setUsername(e.target.value)}
                     className="input" placeholder="Nombre de usuario" required />
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                    <input type="password" value={password} 
+                    onChange={(e) => setPassword(e.target.value)}
                     className="input" placeholder="Contraseña" required />
                     <div align="center">
-                        <button type="submit" className="button">
+                        <button type="submit" className="submit-btn">
                             Entrar
                         </button>
                             <p className="error">{error}</p>
                     </div>
                 </form>
+                <SigninForm />
             </div>
             <footer className="footer">
                 <address>

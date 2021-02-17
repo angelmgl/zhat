@@ -8,6 +8,7 @@
 .chat-title-container {
     width: 100%;
     padding: 10px 0;
+    color: #000;
     text-align: center;
     background-color: #dfdfdf;
     position: sticky;
@@ -16,14 +17,21 @@
 }
 
 .chat-title {
-    color: #000;
     font-weight: 800;
     font-size: 24px;
 }
 
 .chat-subtitle {
-    color: #444;
+    opacity: .7;
     font-weight: 600;
     font-size: 12px;
     padding-top: 4px;
+}
+
+.bg-dark {
+    background-color: #38393A;
+}
+
+.light-text {
+    color: #efefef;
 }

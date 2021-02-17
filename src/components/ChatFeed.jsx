@@ -2,14 +2,12 @@ import MessageForm from './MessageForm';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import Loader from './Loader';
+import SwitchTheme from './SwitchTheme';
 
 const ChatFeed = (props) => {
     const { chats, activeChat, userName, messages } = props;
 
     const chat = chats && chats[activeChat];
-
-    console.log(props);
-    console.log(chats[activeChat]);
 
     const renderReadReceipts = (message, isMyMessage) => {
         return chat.people.map((person, index) => person.last_read === message.id && (
@@ -59,9 +57,10 @@ const ChatFeed = (props) => {
 
     return(
         <div className="chat-feed" id="chat-feed">
-            <div className="chat-title-container"> 
+            <div className="chat-title-container" id="header"> 
                 <div className="chat-title">{ chat?.title }</div>
                 <div className="chat-subtitle">{ chat.people.map(person => `${person.person.username} `) }</div>
+                <SwitchTheme />
             </div>
             { renderMessages() }
             <div className="space" />

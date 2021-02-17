@@ -23,6 +23,7 @@
 .chat-title-container {
   width: 100%;
   padding: 10px 0;
+  color: #000;
   text-align: center;
   background-color: #dfdfdf;
   position: -webkit-sticky;
@@ -32,16 +33,23 @@
 }
 
 .chat-title {
-  color: #000;
   font-weight: 800;
   font-size: 24px;
 }
 
 .chat-subtitle {
-  color: #444;
+  opacity: .7;
   font-weight: 600;
   font-size: 12px;
   padding-top: 4px;
+}
+
+.bg-dark {
+  background-color: #38393A;
+}
+
+.light-text {
+  color: #efefef;
 }
 
 .loader-div {
@@ -198,8 +206,8 @@
   font-size: 16px;
   border-radius: 6px 0px 6px 6px;
   max-width: 60%;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.5);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
   background-color: #54a0ff;
   float: right;
   margin-bottom: 10px;
@@ -213,8 +221,8 @@
   font-size: 16px;
   border-radius: 0px 10px 10px 10px;
   max-width: 60%;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px white;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px white;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
   background-color: #efefef;
   float: left;
   margin-bottom: 10px;
@@ -306,7 +314,6 @@
   padding: 0px 12px;
   min-height: 37px;
   cursor: pointer;
-  color: #5f5f5f;
 }
 
 .send-button {
@@ -315,15 +322,21 @@
   background-color: transparent;
   padding: 0px 12px;
   cursor: pointer;
-  color: #5f5f5f;
 }
 
 .send-icon {
   font-size: 2em;
+  color: #5f5f5f;
 }
 
 .picture-icon {
   font-size: 1.7em;
+  color: #5f5f5f;
+}
+
+.message-dark {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #38393A), to(transparent));
+  background-image: linear-gradient(to top, #38393A 80%, transparent);
 }
 
 .wrapper {
@@ -542,5 +555,67 @@
 
 .toggle-btn:hover {
   color: #b00;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .label {
+  background-color: #38393A;
+}
+
+.label {
+  background-color: #efefef;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  height: 26px;
+  width: 50px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25), -3px -3px 10px rgba(255, 255, 255, 0.25);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25), -3px -3px 10px rgba(255, 255, 255, 0.25);
+}
+
+.label .ball {
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  -webkit-transform: translateX(24px);
+          transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
 }
 /*# sourceMappingURL=styles.css.map */

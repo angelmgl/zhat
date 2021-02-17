@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/zhat/static/css/main.f9db876a.chunk.css",
-    "main.js": "/zhat/static/js/main.022495a5.chunk.js",
-    "main.js.map": "/zhat/static/js/main.022495a5.chunk.js.map",
+    "main.css": "/zhat/static/css/main.8b645ef6.chunk.css",
+    "main.js": "/zhat/static/js/main.270df18a.chunk.js",
+    "main.js.map": "/zhat/static/js/main.270df18a.chunk.js.map",
     "runtime-main.js": "/zhat/static/js/runtime-main.22e5a5ad.js",
     "runtime-main.js.map": "/zhat/static/js/runtime-main.22e5a5ad.js.map",
-    "static/js/2.de1f5197.chunk.js": "/zhat/static/js/2.de1f5197.chunk.js",
-    "static/js/2.de1f5197.chunk.js.map": "/zhat/static/js/2.de1f5197.chunk.js.map",
+    "static/js/2.7eb8bfa7.chunk.js": "/zhat/static/js/2.7eb8bfa7.chunk.js",
+    "static/js/2.7eb8bfa7.chunk.js.map": "/zhat/static/js/2.7eb8bfa7.chunk.js.map",
     "index.html": "/zhat/index.html",
-    "static/css/main.f9db876a.chunk.css.map": "/zhat/static/css/main.f9db876a.chunk.css.map",
-    "static/js/2.de1f5197.chunk.js.LICENSE.txt": "/zhat/static/js/2.de1f5197.chunk.js.LICENSE.txt",
+    "static/css/main.8b645ef6.chunk.css.map": "/zhat/static/css/main.8b645ef6.chunk.css.map",
+    "static/js/2.7eb8bfa7.chunk.js.LICENSE.txt": "/zhat/static/js/2.7eb8bfa7.chunk.js.LICENSE.txt",
     "static/media/zhat.e30e2180.png": "/zhat/static/media/zhat.e30e2180.png"
   },
   "entrypoints": [
     "static/js/runtime-main.22e5a5ad.js",
-    "static/js/2.de1f5197.chunk.js",
-    "static/css/main.f9db876a.chunk.css",
-    "static/js/main.022495a5.chunk.js"
+    "static/js/2.7eb8bfa7.chunk.js",
+    "static/css/main.8b645ef6.chunk.css",
+    "static/js/main.270df18a.chunk.js"
   ]
 }

@@ -258,7 +258,7 @@
   word-wrap: break-word;
 }
 
-.message-image {
+.thumbnail {
   margin-right: 18px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -266,9 +266,8 @@
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
   height: 30vw;
-  /* width: 30vw; */
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 300px;
+  max-width: 300px;
   min-height: 100px;
   min-width: 100px;
   margin-bottom: 10px;

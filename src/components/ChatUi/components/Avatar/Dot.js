@@ -8,6 +8,8 @@ export default class Dot extends Component {
 
     updateImg() {
         let { avatar } = this.props
+        //avatar es igual a 
+        //si existe y es diferente que null = avatar, sino nada
         avatar = avatar && avatar !== null ? avatar : ''
         
         if (avatar.split('?')[0] !== this.state.avatar.split('?')[0]) {

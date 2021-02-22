@@ -1,11 +1,10 @@
-
-/*            renderChatList={(chatAppProps) => <ChatList {...chatAppProps} />} */
+import React from "react";
 
 const ChatList = (props) => {
     console.log(props);
 
     return(
-        <div></div>
+        <div>ChatList</div>
     )
 }
 

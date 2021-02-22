@@ -25,11 +25,8 @@ export default class ChatFeed extends Component {
 
     renderTypers() {
         const { typingData, activeChat } = this.props
-        const typers = typingData && typingData[activeChat] ? typingData[activeChat] : []
-
-        if (this.props.renderIsTyping) {
-            return this.props.renderIsTyping(typers)
-        }
+        const typers = typingData && typingData[activeChat] 
+                    ? typingData[activeChat] : []
 
         return typers.map((typer, index) => {
             return (
@@ -37,7 +34,7 @@ export default class ChatFeed extends Component {
                     key={`typer_${index}`} 
                     style={{ color: stringToColor(typer), padding: '2px', paddingLeft: '12px' }}
                 >
-                    {`${typer} is typing...`}
+                    {`${typer} está escribiendo...`}
                 </div>
             )
         })
@@ -52,22 +49,6 @@ export default class ChatFeed extends Component {
             const message = messages[key]
             const lastMessageKey = index === 0 ? null : keys[index - 1]
             const nextMessageKey = index === keys.length - 1 ? null : keys[index + 1]
-
-            if (this.props.renderMessageBubble) {
-                return (
-                    <div key={`message_${index}`}>
-                        { 
-                            this.props.renderMessageBubble(
-                                this.props, 
-                                chat, 
-                                messages[lastMessageKey], 
-                                message, 
-                                messages[nextMessageKey]
-                            ) 
-                        }
-                    </div>
-                )
-            }
             
             return (
                 <Message 
@@ -119,11 +100,8 @@ export default class ChatFeed extends Component {
                 style={{ display: 'flex', maxHeight: '100vh', backgroundColor: '#f0f0f0' }}
             >
 
-                {
-                    this.props.renderChatHeader ? 
-                    this.props.renderChatHeader(chat) :
+                
                     <Title chat={chat} />
-                }
 
 
                 <div
@@ -142,11 +120,7 @@ export default class ChatFeed extends Component {
 
                 </div>
 
-                {
-                    this.props.renderNewMessageForm ?
-                    this.props.renderNewMessageForm(this.props, activeChat) :
-                    <MessageForm creds={this.props} chatId={activeChat} />
-                }
+                <MessageForm creds={this.props} chatId={activeChat} />
 
             </div>
         )
@@ -160,6 +134,6 @@ const styles = {
         width: '100%', 
         overflow: 'scroll',
         overflowX: 'hidden',
-        backgroundColor: 'white'
+        backgroundColor: '#efefef'
     }
 }

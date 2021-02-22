@@ -69,7 +69,7 @@ export default class Message extends Component {
                 </div>
 
                 <Row
-                    style={{ paddingRight: '2px' }} 
+                    style={{ paddingRight: '10px' }} 
                     className='ce-message-bubble-row ce-my-message-bubble-row'
                 >
 
@@ -106,7 +106,8 @@ const styles = {
     myMessage: {
         color: 'white', 
         cursor: 'pointer',
-        float: 'right', textAlign: 'left', // Stay right but render text
+        float: 'right', 
+        textAlign: 'left', // Stay right but render text
         padding: '12px',
         fontSize: '15px',
         whiteSpace: 'pre-line',

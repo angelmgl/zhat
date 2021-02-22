@@ -13,26 +13,27 @@
   box-sizing: border-box;
 }
 
-.chat-feed {
+.ce-chat-feed-container {
   height: 100vh;
   width: 100%;
   overflow: scroll;
+  overflow-x: hidden;
   background-color: #dfdfdf;
 }
 
-.chat-feed::-webkit-scrollbar-track {
+.ce-chat-feed-container::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: transparent;
 }
 
-.chat-feed::-webkit-scrollbar {
+.ce-chat-feed-container::-webkit-scrollbar {
   width: 8px;
   background-color: transparend;
 }
 
-.chat-feed::-webkit-scrollbar-thumb {
+.ce-chat-feed-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
           box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -265,26 +266,11 @@
   border-radius: 6px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
-  height: 30vw;
   max-height: 300px;
   max-width: 300px;
   min-height: 100px;
   min-width: 100px;
   margin-bottom: 10px;
-}
-
-.read-receipts {
-  position: relative;
-}
-
-.read-receipt {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 1.5px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 15px;
 }
 
 .space {

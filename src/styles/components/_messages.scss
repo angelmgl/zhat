@@ -55,24 +55,9 @@
     border-radius: 6px;
     box-shadow:  5px 5px 10px rgba(0,0,0,.25),
                 -5px -5px 10px rgba(255, 255, 255,.25);
-    height: 30vw;
     max-height: 300px;
     max-width: 300px;
     min-height: 100px;
     min-width: 100px;
     margin-bottom: 10px;
-}
-
-.read-receipts {
-    position: relative;
-}
-
-.read-receipt {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 1.5px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 15px;
 }

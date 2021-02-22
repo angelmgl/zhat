@@ -106,7 +106,6 @@ export default class ChatFeed extends Component {
 
                 <div
                     id='ce-feed-container'
-                    style={styles.feedContainer} 
                     className='ce-chat-feed-container'
                 >
 
@@ -124,16 +123,5 @@ export default class ChatFeed extends Component {
 
             </div>
         )
-    }
-}
-const styles = {
-    feedContainer: { 
-        position: 'absolute', 
-        top: '0px', 
-        height: '100%', 
-        width: '100%', 
-        overflow: 'scroll',
-        overflowX: 'hidden',
-        backgroundColor: 'white'
     }
 }

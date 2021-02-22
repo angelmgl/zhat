@@ -1,7 +1,8 @@
-.chat-feed {
+.ce-chat-feed-container {
     height: 100vh;
     width: 100%;
     overflow: scroll;
+    overflow-x: hidden;
     background-color: #dfdfdf;
 
     &::-webkit-scrollbar-track

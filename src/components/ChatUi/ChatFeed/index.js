@@ -95,32 +95,16 @@ export default class ChatFeed extends Component {
         }
 
         return (
-            <div 
-                className='ce-chat-feed'
-                style={{ display: 'flex', maxHeight: '100vh', backgroundColor: '#f0f0f0' }}
-            >
+            <div className="chat-feed-container">
+                <Title chat={chat} />
 
-                
-                    <Title chat={chat} />
-
-
-                <div
-                    id='ce-feed-container'
-                    className='ce-chat-feed-container'
-                >
-
-                    <div style={{ height: '88px' }} className='ce-feed-container-top' />
-
+                <div className="chat-message-container">
                     { this.renderMessages() }
 
                     { this.renderTypers() }
-
-                    <div style={{ height: '54px' }} className='ce-feed-container-bottom' />
-
                 </div>
 
                 <MessageForm creds={this.props} chatId={activeChat} />
-
             </div>
         )
     }

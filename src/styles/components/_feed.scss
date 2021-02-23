@@ -1,9 +1,19 @@
-.ce-chat-feed-container {
+:root {
+    overflow: hidden;
+}
+
+.chat-feed-container {
     height: 100vh;
     width: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13vh 75vh 12vh;
     background-color: #dfdfdf;
+}
+
+.chat-message-container {
+    height: 100%;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar-track
     {

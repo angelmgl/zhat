@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { timeSinceDate } from '../../Utilities/dateToString'
 
 export default class Title extends Component {
-  
+
     render() {
         const { chat } = this.props
 
@@ -12,7 +12,6 @@ export default class Title extends Component {
         return (
             <div 
                 className='ce-chat-title'
-                style={{ position: 'absolute', top: '0px', width: '100%', zIndex: '1' }}
             >
                 <div style={styles.titleContainer} className='ce-chat-title-container'>  
                     <div style={styles.titleText} className='ce-chat-title-text'>
@@ -22,7 +21,7 @@ export default class Title extends Component {
                     <div style={styles.subtitleText} className='ce-chat-subtitle-text'>
                         {
                             chat.last_message.created && chat.last_message.created.length > 0 &&
-                            `Active ${timeSinceDate(chat.last_message.created)}`
+                            `Activo el ${timeSinceDate(chat.last_message.created)}`
                         }
                     </div>
                 </div>

@@ -78,8 +78,6 @@ export default class MessageForm extends React.Component {
 
 const styles = {
   messageFormContainer: { 
-    position: 'absolute', 
-    bottom: '0px', 
     width: '100%', 
     backgroundColor: 'white',
   },

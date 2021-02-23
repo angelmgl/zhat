@@ -55,26 +55,28 @@
 
 .chat-title-container {
   width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 0;
-  color: #000;
   text-align: center;
   background-color: #dfdfdf;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 9999;
+  border: 1px solid red;
 }
 
-.chat-title {
-  font-weight: 800;
-  font-size: 24px;
+.chat-title h2 {
+  font-size: 1.75rem;
 }
 
-.chat-subtitle {
-  opacity: .7;
-  font-weight: 600;
+.chat-title p {
   font-size: 12px;
-  padding-top: 4px;
 }
 
 .bg-dark {

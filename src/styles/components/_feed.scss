@@ -38,25 +38,24 @@
 
 .chat-title-container {
     width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 0;
-    color: #000;
     text-align: center;
     background-color: #dfdfdf;
-    position: sticky;
-    top: 0px;
-    z-index: 9999;
+    border: 1px solid red;
 }
 
 .chat-title {
-    font-weight: 800;
-    font-size: 24px;
-}
+    h2 {
+        font-size: 1.75rem;
+    }
 
-.chat-subtitle {
-    opacity: .7;
-    font-weight: 600;
-    font-size: 12px;
-    padding-top: 4px;
+    p {
+        font-size: 12px;
+    }
 }
 
 .bg-dark {

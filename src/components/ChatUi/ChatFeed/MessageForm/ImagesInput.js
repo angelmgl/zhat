@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FaImage } from 'react-icons/fa'
-
 export default class ImagesInput extends React.Component {
     state = {
         files: []
@@ -23,12 +21,8 @@ export default class ImagesInput extends React.Component {
         return (
             <form
                 encType="multipart/form-data"
-                style={{ height: '0px', display: 'inline' }}
+                style={{ height: '0px', display: 'none' }}
             >
-
-                <label htmlFor="files" className="image-button">
-                    <FaImage className="picture-icon" />
-                </label>
 
                 <input
                     type="file"

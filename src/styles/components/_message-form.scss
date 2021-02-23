@@ -15,7 +15,7 @@
 .message-form-grid {
     padding: 12px 0px;
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: min-content 1fr min-content;
 }
 
 .message-form {
@@ -39,6 +39,8 @@
 .image-button {
     padding: 0px 12px;
     cursor: pointer;
+    display: flex;
+    align-items: flex-end;
 }
 
 .send-button {
@@ -46,6 +48,8 @@
     background-color: transparent;
     padding: 0px 12px;
     cursor: pointer;
+    display: flex;
+    align-items: flex-end;
 }
 
 .send-icon {
@@ -64,7 +68,6 @@
     &:hover {
         color: #54a0ff;
     }
-    
 }
 
 .message-dark {

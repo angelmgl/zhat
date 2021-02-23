@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { sendMessage, isTyping } from 'react-chat-engine'
-import { FaPaperPlane } from 'react-icons/fa'
+import { FaPaperPlane, FaImage } from 'react-icons/fa'
 
 import FileRow from './FileRow'
 import ImagesInput from './ImagesInput'
@@ -52,19 +52,24 @@ export default class MessageForm extends React.Component {
           <FileRow files={this.state.files} onRemove={(i) => this.onRemove(i)} />
           <div className="message-form-grid">
             <ImagesInput onSelectFiles={(files) => this.setState({ files })} />
+            
 
-            <form onSubmit={this.handleSubmit.bind(this)} className='message-form'>
+            <label htmlFor="files" className="image-button">
+              <FaImage className="picture-icon" />
+            </label>
+
+            <form onSubmit={this.handleSubmit.bind(this)} id="send-message">
                 <TextAreaInput
                   value={this.state.value}
                   label='Escribe un mensaje...'
                   handleChange={this.handleChange.bind(this)}
                   onSubmit={this.handleSubmit.bind(this)}
                 />
-
-                <button type="submit" id="submit-button" className="send-button">
-                  <FaPaperPlane className="send-icon" />
-                </button>
             </form>
+
+            <button type="submit" id="submit-button" className="send-button" form="send-message">
+              <FaPaperPlane className="send-icon" />
+            </button>
           </div>
         </div>
       );

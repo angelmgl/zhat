@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { PaperClipOutlined } from '@ant-design/icons'
+import { FaImage } from 'react-icons/fa'
 
 export default class ImagesInput extends React.Component {
     state = {
-        hovered: false,
         files: []
     }
 
@@ -23,34 +22,21 @@ export default class ImagesInput extends React.Component {
     render() {
         return (
             <form
-                className="uploader"
                 encType="multipart/form-data"
-                style={{ height: '0px' }}
+                style={{ height: '0px', display: 'inline' }}
             >
 
-                <label
-                    htmlFor="files"
-                    id='upload-document-button'
-                >
-
-                    <PaperClipOutlined 
-                        onMouseEnter={() => this.setState({ hovered: true })}
-                        onMouseLeave={() => this.setState({ hovered: false })}
-                        style={{
-                            ...{ cursor: 'pointer', position: 'absolute', bottom: '20px', right: '63px', fontSize: '18px' },
-                            ...{ color: this.state.hovered ? '#69c0ff' : '#1890ff' }
-                        }}
-                    />
-
+                <label htmlFor="files" className="image-button">
+                    <FaImage className="picture-icon" />
                 </label>
 
                 <input
-                    multiple
+                    type="file"
                     id="files"
                     accept="image/x-png,image/gif,image/jpeg"
-                    style={{ visibility: "hidden" }}
-                    type="file"
+                    style={{ display: 'none' }}
                     onChange={(e) => this.onSelect(e)} 
+                    multiple
                 />
 
             </form>

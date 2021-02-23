@@ -21,6 +21,11 @@ export default class TextAreaInput extends Component {
         textarea.style.height = Math.min(textarea.scrollHeight, 150) + "px";
     }
 
+    normalize() {
+        var textarea = document.getElementById("msg-textarea");
+        textarea.style.height = "";
+    }
+
     componentDidMount() {
         this.resize()
     }
@@ -33,6 +38,7 @@ export default class TextAreaInput extends Component {
     onKeyDown(e) {
         if (e.key === 'Enter') { 
             e.preventDefault()
+            this.normalize()
 
             if (this.props.value.length > 0) {
                 this.props.onSubmit && this.props.onSubmit(e) 
@@ -44,9 +50,8 @@ export default class TextAreaInput extends Component {
         return (
             <textarea 
                 id='msg-textarea'
-                className='ce-input ce-textarea-input'
+                className='textarea-input'
                 rows='1'
-                style={ styles.input }
                 value={ this.props.value }
                 placeholder={ this.props.label }
                 onBlur={() => this.setState({ focused: false })}
@@ -56,25 +61,5 @@ export default class TextAreaInput extends Component {
                 onKeyDown={(e) => this.onKeyDown(e)}
             />
         )
-    }
-}
-// This is another thing we need to chat about which regards the competence of one more
-const styles = {
-    input: { 
-        // Border
-        border: '1px solid white',
-        width: 'calc(100% - 64px - 24px - 44px)',
-        outline: 'none', 
-        // Fonts
-        fontFamily: 'inherit',
-        fontSize: '15px',
-        // Padding
-        paddingLeft: '12px',
-        paddingRight: '12px',
-        // Position
-        position: 'relative', 
-        left: '12px',
-        // Dynamic Sizing
-        resize: 'none', 
     }
 }

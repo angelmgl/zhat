@@ -11,14 +11,14 @@ export default class FileRow extends React.Component {
         return (
             <div 
                 className="thumbnail-container"
+                onMouseEnter={() => this.setState({ hovered: true })}
+                onMouseLeave={() => this.setState({ hovered: false })}
             >
                 
                 <img
                     className="image-square"
                     alt={this.props.file ? this.props.file.name : ''}
                     src={URL.createObjectURL(this.props.file)}
-                    onMouseEnter={() => this.setState({ hovered: true })}
-                    onMouseLeave={() => this.setState({ hovered: false })}
                 />
 
                 {

@@ -8,8 +8,6 @@ import MessageForm from './MessageForm'
 
 import _ from 'lodash'
 
-import { animateScroll } from "react-scroll"
-
 import { stringToColor } from '../Utilities/colorMapping'
 
 export default class ChatFeed extends Component {
@@ -40,6 +38,11 @@ export default class ChatFeed extends Component {
         })
     }
 
+    scrollDown() {
+        var feed = document.getElementById('chat-feed');
+        feed.scrollTop = feed.scrollHeight;
+    }
+
     renderMessages() {
         const { messages, chats, activeChat } = this.props
         const chat = chats && chats[activeChat]
@@ -63,18 +66,9 @@ export default class ChatFeed extends Component {
         })
     }
 
-    scrollToBottom() {
-        animateScroll.scrollToBottom({
-            duration: this.state.duration,
-            containerId: "ce-feed-container"
-        })
-    }
-
     componentDidUpdate() {
-        // Only scroll if messages loaded
-        // TODO: Make more sophisticated
         if(!_.isEmpty(this.props.messages)) {
-            this.scrollToBottom()
+            this.scrollDown()
         }
     }
 
@@ -98,7 +92,7 @@ export default class ChatFeed extends Component {
             <div className="chat-feed-container">
                 <Title chat={chat} />
 
-                <div className="chat-message-container">
+                <div className="chat-message-container" id="chat-feed">
                     { this.renderMessages() }
 
                     { this.renderTypers() }

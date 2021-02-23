@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { sendMessage, isTyping } from 'react-chat-engine'
+import { FaPaperPlane } from 'react-icons/fa'
 
 import FileRow from './FileRow'
 import ImagesInput from './ImagesInput'
-
-import { Button } from '../../components/Button'
 import { TextAreaInput } from '../../components/Input'
 
 export default class MessageForm extends React.Component {
@@ -47,43 +46,27 @@ export default class MessageForm extends React.Component {
     render() {
       return (
         <div 
-          id='msg-form-container'
-          style={styles.messageFormContainer}
-          className='ce-message-form-container'
+          className='message-form-container'
         >
+
           <FileRow files={this.state.files} onRemove={(i) => this.onRemove(i)} />
+          <div className="message-form-grid">
+            <ImagesInput onSelectFiles={(files) => this.setState({ files })} />
 
-          <ImagesInput onSelectFiles={(files) => this.setState({ files })} />
+            <form onSubmit={this.handleSubmit.bind(this)} className='message-form'>
+                <TextAreaInput
+                  value={this.state.value}
+                  label='Escribe un mensaje...'
+                  handleChange={this.handleChange.bind(this)}
+                  onSubmit={this.handleSubmit.bind(this)}
+                />
 
-          <form onSubmit={this.handleSubmit.bind(this)} className='ce-message-form'>
-            <div style={styles.inputContainer} className='ce-message-input-form'>
-              <TextAreaInput
-                value={this.state.value}
-                label='Send a message...'
-                handleChange={this.handleChange.bind(this)}
-                onSubmit={this.handleSubmit.bind(this)}
-              />
-
-              <Button 
-                icon='send'
-                type="submit"
-                style={{ position: 'absolute', bottom: '10px', right: '6px' }}
-              />
-            </div>
-          </form>
+                <button type="submit" id="submit-button" className="send-button">
+                  <FaPaperPlane className="send-icon" />
+                </button>
+            </form>
+          </div>
         </div>
       );
     }
-}
-
-const styles = {
-  messageFormContainer: { 
-    width: '100%', 
-    backgroundColor: 'white',
-  },
-  inputContainer: { 
-    minHeight: '36px',
-    paddingTop: '10px',
-    paddingBottom: '6px',
-  },
 }

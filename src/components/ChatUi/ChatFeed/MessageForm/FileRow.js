@@ -14,12 +14,12 @@ export default class FileRow extends React.Component {
             )
         })
     }
-  
+
     render() {
         return (
-            <div style={{ width: 'calc(100% - 24px)', paddingLeft: '12px' }}>
+            <div style={{ width: 'calc(100% - 24px)', paddingLeft: '12px', border: '1px solid red' }}>
                 { this.renderFiles() }
             </div>
-      ) ;
+    ) ;
     }
 }

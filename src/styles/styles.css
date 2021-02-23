@@ -24,8 +24,9 @@
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 13vh 75vh 12vh;
-      grid-template-rows: 13vh 75vh 12vh;
+  -ms-grid-rows: 13vh 1fr minmax(min-content, max-content);
+      grid-template-rows: 13vh 1fr minmax(-webkit-min-content, -webkit-max-content);
+      grid-template-rows: 13vh 1fr minmax(min-content, max-content);
   background-color: #dfdfdf;
 }
 
@@ -366,6 +367,29 @@
 .message-dark {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #38393A), to(transparent));
   background-image: linear-gradient(to top, #38393A 80%, transparent);
+}
+
+.thumbnail-container {
+  padding: 12px 6px;
+}
+
+.thumbnail-container .image-square {
+  height: 108px;
+  width: 108px;
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: inline;
+}
+
+.thumbnail-container .close-icon {
+  position: relative;
+  bottom: 91px;
+  right: 20px;
+  width: 0px;
+  cursor: pointer;
+  outline: none;
 }
 
 .wrapper {

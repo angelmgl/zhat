@@ -75,3 +75,25 @@
 .message-dark {
     background-image: linear-gradient(to top, #38393A 80%, transparent);
 }
+
+.thumbnail-container {
+    padding: 12px 6px;
+
+    .image-square {
+        height: 108px; 
+        width: 108px; 
+        border: 1px solid #afafaf;
+        border-radius: 8px;
+        object-fit: cover;
+        display: inline;
+    }
+
+    .close-icon {
+        position: relative; 
+        bottom: 91px; 
+        right: 20px; 
+        width: 0px; 
+        cursor: pointer;
+        outline: none;
+    }
+}

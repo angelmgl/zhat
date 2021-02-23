@@ -6,48 +6,30 @@ export default class FileRow extends React.Component {
     state = {
         hovered: false
     }
-  
+
     render() {
         return (
             <div 
-                style={{ padding: '12px 6px', display: 'inline' }}
-                onMouseEnter={() => this.setState({ hovered: true })}
-                onMouseLeave={() => this.setState({ hovered: false })}
+                className="thumbnail-container"
             >
                 
                 <img
-                    style={styles.imageSquare}
+                    className="image-square"
                     alt={this.props.file ? this.props.file.name : ''}
                     src={URL.createObjectURL(this.props.file)}
+                    onMouseEnter={() => this.setState({ hovered: true })}
+                    onMouseLeave={() => this.setState({ hovered: false })}
                 />
 
                 {
                     this.state.hovered &&
                     <CloseCircleTwoTone 
-                        style={styles.closeIcon} 
+                        className="close-icon" 
                         onClick={() => this.props.onRemove && this.props.onRemove()}
                     />
                 }
 
             </div>
-      ) ;
-    }
-}
-
-const styles = {
-    imageSquare: { 
-        height: '108px', 
-        width: '108px', 
-        border: '1px solid #afafaf',
-        borderRadius: '8px',
-        objectFit: 'cover',
-        display: 'inline',
-    },
-    closeIcon: {
-        position: 'relative', 
-        bottom: '91px', 
-        right: '20px', 
-        width: '0px', 
-        cursor: 'pointer'
+        ) ;
     }
 }

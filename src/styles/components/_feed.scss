@@ -7,7 +7,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 13vh 75vh 12vh;
+    grid-template-rows: 13vh 1fr minmax(min-content, max-content);
     background-color: #dfdfdf;
 }
 
